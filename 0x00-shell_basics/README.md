@@ -1,0 +1,1 @@
+Exercisies for learning the shell and scripting basics
