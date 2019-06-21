@@ -1,1 +1,18 @@
 #!/usr/bin/env bash
+# WOOT WOOT ITS FIZBUZZ
+Num=1
+while [ $Num -lt 101 ]; do
+    if ! (( Num % 15 ))
+    then
+	echo "FizzBuzz"
+    elif ! (( Num % 5 ))
+    then
+	echo "Buzz"
+    elif ! (( Num % 3 ))
+    then
+	echo "Fizz"
+    else
+	echo $Num
+    fi
+    (( Num++ ))
+done
