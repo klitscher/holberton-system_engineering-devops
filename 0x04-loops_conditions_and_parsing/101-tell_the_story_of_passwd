@@ -1,1 +1,13 @@
 #!/usr/bin/env bash
+# Tell a story about password file
+while IFS=: read -r line
+do
+    Uname=$(echo $line | cut -d ':' -f 1)
+    Gid=$(echo $line | cut -d ':' -f 4)
+    Hdir=$(echo $line | cut -d ':' -f 6)
+    Cshell=$(echo $line | cut -d ':' -f 7)
+    Uid=$(echo $line | cut -d ':' -f 3)
+    Pass=$(echo $line | cut -d ':' -f 2)
+    Uinfo=$(echo $line | cut -d ':' -f 5)
+    echo "The user $Uname is part of the $Gid gang, lives in $Hdir and rides $Cshell. $Uid's place is protected by the passcode $Pass, more info about the user here: $Uinfo"
+done < "/etc/passwd"
