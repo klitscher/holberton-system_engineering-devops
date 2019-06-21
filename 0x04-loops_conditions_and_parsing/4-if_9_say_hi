@@ -1,1 +1,11 @@
 #!/usr/bin/env bash
+# While loop with if statement
+Count=0
+while [ $Count -lt 10 ]; do
+    echo "Holberton School"
+    if [[ $Count -eq 8 ]]
+    then
+	echo "Hi"
+    fi
+    (( Count++))
+done

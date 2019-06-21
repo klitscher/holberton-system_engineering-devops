@@ -1,1 +1,15 @@
 #!/usr/bin/env bash
+# While loop with multiple ifs
+Count=0
+while [ $Count -lt 10 ]; do
+    if [[ $Count -eq 3 ]]
+    then
+	echo "bad luck"
+    elif [[ $Count -eq 7 ]]
+    then
+	echo "good luck"
+    else
+	echo "Holberton School"
+    fi
+    (( Count++ ))
+done

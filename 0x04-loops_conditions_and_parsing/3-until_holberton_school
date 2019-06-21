@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-#Display holberton 10 times: until loop
+# Display holberton 10 times: until loop
 Count=10
 until [ $Count -eq 0 ]
 do
