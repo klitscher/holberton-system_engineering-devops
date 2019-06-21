@@ -1,1 +1,7 @@
 #!/usr/bin/env bash
+#Display Holberton School 10 times: while loop
+Count=0
+while [ $Count -lt 10 ]; do
+    echo "Holberton School"
+    let Count++
+done
