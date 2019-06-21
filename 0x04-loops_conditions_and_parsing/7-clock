@@ -2,7 +2,7 @@
 # Display time
 Hour=0
 while [ $Hour -lt 13 ]; do
-    echo "Hour: " $Hour
+    echo "Hour: "$Hour
     Minute=1
     while [ $Minute -lt 60 ]; do
 	echo $Minute
