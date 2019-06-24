@@ -1,1 +1,5 @@
 #!/usr/bin/env bash
+# Display words infinitely
+while [ 1 ]; do
+    echo "To infinity and beyond"
+done
