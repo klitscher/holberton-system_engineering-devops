@@ -1,0 +1,28 @@
+#!/usr/bin/env bash
+# Manages the manage_my_process script
+comm=$1
+
+if [[ $comm = "start" ]]
+then
+    ./manage_my_process &
+    touch ./my_process.pid
+    echo $$ > ./my_process.pid
+    sudo mv ./my_process.pid /var/run/
+    echo "manage_my_process started"
+elif [[ $comm = "stop" ]]
+then
+    pkill -f ./manage_my_process
+    sudo rm /var/run/my_process.pid
+    echo "manage_my_process stopped"
+elif [[ $comm = "restart" ]]
+then
+    sudo pkill -f ./manage_my_process
+    sudo rm /var/run/my_process.pid
+    ./manage_my_process &
+    touch ./my_process.pid
+    echo $$ > ./my_process.pid
+    sudo mv ./my_process.pid /var/run/
+    echo "manage_my_process restarted"
+else
+    echo "Usage: manage_my_process {start|stop|restart}"
+fi
