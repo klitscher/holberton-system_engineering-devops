@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+# Script to dsiplay listening ports
+netstat -lp
