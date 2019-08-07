@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+# Script to install an nginx web-server on server
+apt-get -y update
+apt-get -y install nginx
+touch /var/www/html/index.html
+echo 'Holberton School' > index.html
+service nginx restart
