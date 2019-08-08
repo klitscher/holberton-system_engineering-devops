@@ -1,3 +1,4 @@
 #!/usr/bin/env bash
 # Fixing a server
+echo "ServerName localhost" | sudo tee /etc/apache2/conf-available/fqdn.conf && sudo a2enconf fqdn
 service apache2 start
