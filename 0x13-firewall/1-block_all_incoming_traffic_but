@@ -1,5 +1,5 @@
-sudo ufw allow ssh
+sudo ufw allow 22
 sudo ufw enable
-sudo ufw allow https
-sudo uff allow http
+sudo ufw allow 443
+sudo uff allow 80
 sudo ufw reload
