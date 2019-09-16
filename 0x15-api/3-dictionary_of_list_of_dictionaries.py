@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """Module to connect to an api and grab data"""
 
+from collections import OrderedDict
 import csv
 import json
 import requests
@@ -19,16 +20,15 @@ if __name__ == '__main__':
     employee_dict = employee.json()
     todo_list = todo.json()
     # Save data
-    json_data = {}
+    json_data = OrderedDict()
     task_data = []
-    task_new_dict = {}
     for employee in employee_dict:
         for task in todo_list:
             if employee.get('id') == task.get('userId'):
                 task_new_dict = {
+                    'username': employee.get('username'),
                     'task': task.get('title'),
                     'completed': task.get('completed'),
-                    'username': employee.get('username'),
                 }
                 task_data.append(task_new_dict)
         json_data['{}'.format(employee.get('id'))] = task_data
