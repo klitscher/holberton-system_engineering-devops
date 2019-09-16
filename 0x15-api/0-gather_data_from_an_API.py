@@ -18,7 +18,9 @@ if __name__ == '__main__':
     # Save data
     employee_name = employee_dict.get('name')
     number_of_tasks = len(todo_list)
-    completed_tasks = [dic for dic in todo_list if dic.get('completed') is True]
+    completed_tasks = [
+        dic for dic in todo_list if dic.get('completed') is True
+    ]
     # Print data in format specified
     print('Employee {} is done with tasks({}/{}):'.format(
         employee_name,
