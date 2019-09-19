@@ -11,7 +11,7 @@ def top_ten(subreddit):
         "Mozilla/5.0 (Windows NT 5.1; rv:7.0.1) Gecko/20100101 Firefox/7.0.1"
     )
     headers = {"User-Agent": user_agent}
-    url = "https://www.reddit.com/r/{}/top.json?limit=10".format(subreddit)
+    url = "https://www.reddit.com/r/{}/hot.json?limit=10".format(subreddit)
     reddit_data = requests.get(url, headers=headers, allow_redirects=False)
     if reddit_data.status_code in (302, 404):
         print(None)
