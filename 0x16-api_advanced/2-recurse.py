@@ -9,7 +9,7 @@ def recurse(subreddit, hot_list=[], after=''):
     to return the a list of all the hot posts
     for a subreddit, recursively"""
     user_agent = (
-        "Mozilla/5.0 (Windows NT 5.1; rv:7.0.1) Gecko/20100101 Firefox/7.0.1"
+        "python:This_is_a_student_weee:1.8"
     )
     headers = {"User-Agent": user_agent}
     url = "https://www.reddit.com/r/{}/hot.json?after={}".format(
