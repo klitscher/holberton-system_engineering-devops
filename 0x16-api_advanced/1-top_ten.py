@@ -14,7 +14,8 @@ def top_ten(subreddit):
     url = "https://www.reddit.com/r/{}/top.json?limit=10".format(subreddit)
     reddit_data = requests.get(url, headers=headers, allow_redirects=False)
     if reddit_data.status_code in (302, 404):
-        return 0
+        print(None)
+        return
     json_data = reddit_data.json()
     json_data_children = json_data.get('data').get('children')
     for li in json_data_children:
