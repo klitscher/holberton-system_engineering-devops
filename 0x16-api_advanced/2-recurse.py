@@ -20,9 +20,9 @@ def recurse(subreddit, hot_list=[], after=''):
         return None
     json_data = reddit_data.json()
     next_page = json_data.get('data').get('after')
-    if next_page is None:
-        return hot_list
     json_data_children = json_data.get('data').get('children')
     for li in json_data_children:
         hot_list.append(li.get('data').get('title'))
+    if next_page is None:
+        return hot_list
     return recurse(subreddit, hot_list, next_page)
