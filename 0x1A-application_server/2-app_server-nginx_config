@@ -22,7 +22,7 @@ server {
         return 301 https://www.youtube.com/watch?v=QH2-TGUlwu4;
     }
     # Setting up a proxy to gunicorn server listening on port 5000
-    location /airbnb-onepage {
+    location ~ ^/airbnb-onepage(/|$) {
              proxy_pass http://127.0.0.1:5000;
     }
 }
