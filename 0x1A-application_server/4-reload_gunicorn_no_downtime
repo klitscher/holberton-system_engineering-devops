@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+# Script to gracefully shut gunicorn down
+pkill -HUP gunnicorn
