@@ -1,1 +1,1 @@
-# Repository for all Holberton devops assignments
+ Repo for all Holberton devops sections
